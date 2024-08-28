@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Bienvenido a Mi Aplicación Web</h1>
+</header>
+<main>
+    <section id="hello-section">
+        <h2>Servicio Hello</h2>
+        <input type="text" id="name-input" placeholder="Ingresa tu nombre">
+        <button onclick="sayHello()">Saludar</button>
+        <p id="hello-result"></p>
+    </section>
+    <section id="pi-section">
+        <h2>Valor de Pi</h2>
+        <button onclick="getPi()">Obtener Pi</button>
+        <p id="pi-result"></p>
+    </section>
+</main>
+<footer>
+    <p>Desarrollado con mi nuevo framework web</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
