@@ -9,14 +9,13 @@ public class App {
 
     public static void main(String[] args) {
         staticfiles("src/main/resources");
+
         get("/hello", (req, resp) -> {
             String name = req.getValues("name");
             return name != null && !name.isEmpty() ? "Hello " + name : "Hello World!";
         });
         get("/pi", (req, resp) -> String.valueOf(Math.PI));
-
-
-        // Iniciar el servidor web aquí
+        
         WebServer.getInstance().startServer();
     }
 
