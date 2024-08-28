@@ -12,7 +12,7 @@ public class App {
 
         get("/hello", (req, resp) -> {
             String name = req.getValues("name");
-            return name != null && !name.isEmpty() ? "Hello " + name : "Hello World!";
+            return name != null && !name.isEmpty() ? "Hola " + name : "Hola unknown!";
         });
         get("/pi", (req, resp) -> String.valueOf(Math.PI));
         

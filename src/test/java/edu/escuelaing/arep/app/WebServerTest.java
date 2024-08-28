@@ -21,7 +21,6 @@ public class WebServerTest {
     public void testStartServer() {
         WebServer server = WebServer.getInstance();
         try {
-            // Comprobar que el servidor puede iniciarse sin lanzar excepciones.
             ServerSocket serverSocket = new ServerSocket(8080);
             assertNotNull(serverSocket);
             serverSocket.close(); // Cerrar el socket para liberar el puerto

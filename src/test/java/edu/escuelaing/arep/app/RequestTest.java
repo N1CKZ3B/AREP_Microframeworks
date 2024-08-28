@@ -7,9 +7,10 @@ public class RequestTest {
 
     @Test
     public void testParseQueryString() {
-        Request req = new Request("name=Erick&age=22");
-        assertEquals("Erick", req.getValues("name"));
-        assertEquals("22", req.getValues("age"));
+        Request req = new Request("name=Nick&age=21");
+
+        assertEquals("Nick", req.getValues("name"));
+        assertEquals("21", req.getValues("age"));
     }
 
     @Test

@@ -24,16 +24,27 @@ public class AppTest {
     public void testHelloService() {
         App.get("/hello", (req, resp) -> {
             String name = req.getValues("name");
-            return name != null && !name.isEmpty() ? "Hello " + name : "Hello World!";
+            return name != null && !name.isEmpty() ? "Hola " + name : "Hola unknown!";
         });
 
-        Request requestWithName = new Request("name=Erick");
-        Request requestWithoutName = new Request(null);
+        Request nameRequest = new Request("name=Nicolas");
 
-        assertEquals("Hello Erick", App.getServices().get("/App/hello").getValue(requestWithName, new Response()));
-        assertEquals("Hello World!", App.getServices().get("/App/hello").getValue(requestWithoutName, new Response()));
+        assertEquals("Hola Nicolas", App.getServices().get("/App/hello").getValue(nameRequest, new Response()));
+      
     }
 
+    @Test
+    public void testHelloServiceEmpty(){
+        App.get("/hello", (req, resp) -> {
+            String name = req.getValues("name");
+            return name != null && !name.isEmpty() ? "Hola " + name : "Hola unknown!";
+        });
+
+        Request noNamRequest = new Request(null);
+        
+        assertEquals("Hola unknown!", App.getServices().get("/App/hello").getValue(noNamRequest, new Response()));
+    }
+    
     @Test
     public void testPiService() {
         App.get("/pi", (req, resp) -> String.valueOf(Math.PI));
