@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.escuelaing.arep.app</groupId>
-  <artifactId>lab2-app</artifactId>
+ <artifactId>micro-frameworks</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>lab2-app</name>
+  <name>micro-frameworks</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
